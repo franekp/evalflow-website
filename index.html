@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InlineVM - Zero-setup live code execution inside large codebases</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <script type="text/javascript">
+    window.onscroll = function () {
+        document.documentElement.style.setProperty('--scrollPosition', `${document.body.scrollTop || document.documentElement.scrollTop}px`);
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").classList = ['navbar-shrink'];
+        } else {
+            document.getElementById("navbar").classList = [];
+        }
+    }
+  </script>
+</head>
+
+<body>
+<div id="navbar-container">
+    <div id="navbar">
+        <div class="navbar-background"></div>
+        <div class="navbar-flex-container">
+            <img src="logo_dark_red.svg" id="logo" />
+            <div class="navbar-center">
+                <a class="navbar-link" href="#features">Features</a>
+                <a class="navbar-link" href="#how-it-works">How it works</a>
+                <a class="navbar-link" href="#about">About us</a>
+                <a style="display: none;" class="navbar-link" href="#beta">Pricing</a>
+                <a style="display: none;" class="navbar-link" href="#web-demo">
+                    Web demo
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/>
+                    </svg>
+                </a>
+                <a style="display: none;" class="navbar-link" id="navbar-more" href="#more">
+                    More
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <a class="navbar-cta" href="https://forms.gle/2e3iphPbgYQU2YyJ7" target="_blank" rel="noopener noreferrer">
+                    Join waitlist
+                    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="container">
+    <div id="header">
+        <div id="header-left">
+            <h1>Zero-setup live code execution inside large codebases</h1>
+            <h3>
+                A lightweight VM that lives in your editor and executes code as you type.<hr/>
+                Zero configuration, zero side effects, completely isolated from your local environment.
+                Big repositories with non-standard setups Just Work&trade;.
+                Will be available soon as a VS Code plugin for JavaScript, Java and Python.
+            </h3>
+        </div>
+        <div id="header-right">
+            <div class="demo-animation">
+                <video alt="Live code execution demo" playsinline="" muted="" loop="" poster="video-bg-theia-580-100p.jpg"
+                    loading="lazy">
+                    <source type="video/webm; codecs=hevc,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                    <source type="video/webm; codecs=av01.0.05M.08,opus" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                    <source type="video/webm; codecs=avc1.4D401E,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                </video>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div id="header-cta">
+        <a href="https://forms.gle/2e3iphPbgYQU2YyJ7" target="_blank" rel="noopener noreferrer" id="header-primary-cta">
+            Join waitlist
+            <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+            </svg>
+        </a>
+        <a style="display: none;" href="#web-demo" class="secondary-cta">
+            Open web demo
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/>
+            </svg>
+        </a>
+    </div>
+
+    <div id="features">
+        <h1> Features </h1>
+        <div class="feature">
+            <div class="demo-animation-wrapper">
+                <div class="demo-animation">
+                    <video alt="Time travel demo" playsinline="" muted="" loop="" poster="video-bg-theia-580-100p.jpg"
+                            width="100%" loading="lazy">
+                        <source type="video/webm; codecs=hevc,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                        <source type="video/webm; codecs=av01.0.05M.08,opus" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                        <source type="video/webm; codecs=avc1.4D401E,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                    </video>
+                    <div class="demo-animation-inset-shadow"></div>
+                </div>
+            </div>
+            <div class="feature-details-right">
+                <h2>Time travel synchronized with code navigation</h2>
+                <h4>
+                    As you navigate through the code, variable inspector shows you memory from the point in time
+                    corresponding to cursor location in the editor.
+                    <hr />
+                    Go to definition of any function and inspect it's internal workings, move the text cursor around to travel in time back and forth.
+                    <hr /> <hr />
+                    <a style="display: none;" class="secondary-cta" href="#try-it-yourself">
+                        <span>Try it yourself</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/>
+                        </svg>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-details-left">
+                <h2>Partial code execution with smart placeholders</h2>
+                <h4>
+                    Run your code no matter how incomplete your setup is. Gradually add external inputs such as configs, databases or connections to other services.
+                    <hr />
+                    InlineVM will fill all unspecified inputs with smartly-behaving mocks, a technique known as
+                    <a class="link" href="https://en.wikipedia.org/wiki/Symbolic_execution">symbolic execution</a>.
+                    If behaviour of your code depends on something unknown, InlineVM will execute multiple paths and show you all possibilities.
+                    <hr /> <hr />
+                    <a style="display: none;" class="secondary-cta" href="#see-it-in-action">
+                        <span>See it in action</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/>
+                        </svg>
+                    </a>
+                </h4>
+            </div>
+            <div class="demo-animation-wrapper">
+                <div class="demo-animation">
+                    <video alt="Partial execution demo" playsinline="" muted="" loop="" poster="video-bg-theia-580-100p.jpg"
+                            width="100%" loading="lazy">
+                        <source type="video/webm; codecs=hevc,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                        <source type="video/webm; codecs=av01.0.05M.08,opus" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                        <source type="video/webm; codecs=avc1.4D401E,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                    </video>
+                    <div class="demo-animation-inset-shadow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="demo-animation-wrapper">
+                <div class="demo-animation">
+                    <video  alt="Incremental updates demo" playsinline="" muted="" loop="" poster="video-bg-theia-580-100p.jpg"
+                            width="100%" loading="lazy">
+                        <source type="video/webm; codecs=hevc,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                        <source type="video/webm; codecs=av01.0.05M.08,opus" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                        <source type="video/webm; codecs=avc1.4D401E,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                    </video>
+                    <div class="demo-animation-inset-shadow"></div>
+                </div>
+            </div>
+            <div class="feature-details-right">
+                <h2>Fast reloading with incremental updates</h2>
+                <h4>
+                    InlineVM monitors code modifications and reloads automatically.
+                    <hr />
+                    Fine-grained tracking of data dependencies allows us to recompute only those parts of execution that has changed
+                    and re-use previous results.
+                </h4>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-details-left">
+                <h2>Easy inspection of runtime errors</h2>
+                <h4>
+                    Catch errors early with live feedback in your editor. Quickly find root causes by inspecting full call stack and going back and forth in time.
+                    <hr />
+                    Browsable execution trace of your program, always at your fingertips, always reflecting current version of your code. Launching debugger manually and cautious stepping through the code is a thing of the past!
+                </h4>
+            </div>
+            <div class="demo-animation-wrapper">
+                <div class="demo-animation">
+                    <video alt="Inline errors demo" playsinline="" muted="" loop="" poster="video-bg-theia-580-100p.jpg"
+                            width="100%" loading="lazy">
+                        <source type="video/webm; codecs=hevc,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                        <source type="video/webm; codecs=av01.0.05M.08,opus" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                        <source type="video/webm; codecs=avc1.4D401E,mp4a.40.2" data-src="img/CA-intro_2MB.mp4" src="CA-intro_2MB.mp4">
+                    </video>
+                    <div class="demo-animation-inset-shadow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="how-it-works">
+        <h1>How it works</h1>
+        <h3>
+            At its core, InlineVM uses a static code analysis technique called abstract interpretation to calculate values and types
+            of all expressions in a program. Given a control flow graph, a system of equations describing
+            how the execution of each node influences the program state is generated and subsequently solved, 
+            providing a sound approximation of program behaviour.
+            The analysis is performed on-the-fly and edges between CFG nodes are added dynamically,
+            based on previously computed results.
+
+            <hr />
+            If you are interested in more details, <a class="link" href="https://arxiv.org/abs/2401.18029" target="_blank" rel="noopener noreferrer">check out our white paper.</a>
+        </h3>
+    </div>
+
+    <div style="display: none;" id="beta">
+        <h1>Free during the beta</h1>
+        <h3>
+            Until the end of our beta period, June 30, 2024, we offer InlineVM for free.
+            <br />
+            If you actively use it during this time, <b>you'll get a 7<span class="hacky-underline-fix">0</span>% lifetime discount</b>
+            for our regular offering.
+            <hr /> <hr />
+        </h3>
+        <a class="pricing-primary-cta" href="#join-beta">
+            Join beta
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/>
+            </svg>
+        </a>
+    </div>
+
+    <div style="display: none;" id="pricing">
+        <h1> Regular pricing </h1>
+        <h3>After the beta ends, we will be offering the following subscription plans: <hr /></h3>
+        <div id="pricing-frame">
+            <div id="pricing-frame-inner">
+                <div id="pricing-left">
+                    <h2 class="plan-name"> Basic </h2>
+                    <h4 class="for-who"> For small teams </h4>
+                    <h2 class="price"> $10 <span class="price-month"> / month <br /> per developer</span></h2>
+                    <ul class="pricing-plan-items">
+                        <li>
+                            Small repositories with up to 20 contributors
+                        </li>
+                        <li>
+                            Free 14-day trial
+                        </li>
+                        <li>
+                            Email support
+                        </li>
+                    </ul>
+                    <a class="secondary-cta" href="#start-trial-basic">
+                        <span>Start trial</span>
+                    </a>
+                </div>
+                <div id="pricing-middle">
+                    <h2 class="plan-name"> Standard </h2>
+                    <h4 class="for-who"> For professional teams that value productivity and velocity </h4>
+                    <h2 class="price"> $30 <span class="price-month"> / month <br /> per developer</span></h2>
+                    <ul class="pricing-plan-items">
+                        <li>
+                            Repositories with any number of contributors
+                        </li>
+                        <li>
+                            Free 14-day trial
+                        </li>
+                        <li>
+                            Email support
+                        </li>
+                    </ul>
+                    <a class="pricing-primary-cta" href="#start-trial-standard">
+                        Start trial
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div id="pricing-right">
+                    <h2 class="plan-name"> Enterprise </h2>
+                    <h4 class="for-who"> For the most demanding customers </h4>
+                    <h2 class="price"> Custom </h2>
+                    <ul class="pricing-plan-items">
+                        <li>
+                            Data privacy compliance
+                        </li>
+                        <li>
+                            Auditing & reports
+                        </li>
+                        <li>
+                            Priority support
+                        </li>
+                    </ul>
+                    <a class="secondary-cta" href="#contact-us">
+                        <span>Contact us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="pricing-note">
+            <h4>
+                InlineVM is free for Open Source development and for small personal projects
+                with up to 5 contributors. <a class="link" href="#free-plan">Learn more</a>
+            </h4>
+        </div>
+    </div>
+    <div id="about">
+        <h1>About us</h1>
+        <h3>
+            We are a team of developers passionate about making lives of other developers more pleasant.
+            Should you have any questions, feel free to contact us at: <br>
+            franek@inlinevm.com 
+        </h3>
+    </div>
+</div>
+</body>
+
+</html>
