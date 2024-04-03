@@ -1,21 +1,21 @@
 @font-face {
-    font-family: 'HeaderFont';
-    src: url('fonts/OPTIDelTon-Light.ttf.woff');
-}
-
-@font-face {
     font-family: 'NavbarLinkFont';
-    src: url('fonts/NexaBold.otf');
+    src: url('fonts/Nexa-Bold.woff2');
 }
 
 @font-face {
     font-family: 'ButtonFont';
-    src: url('fonts/NexaBold.otf');
+    src: url('fonts/Nexa-Bold.woff2');
 }
 
 @font-face {
     font-family: 'TextFont';
-    src: url('fonts/NexaBook.otf');
+    src: url('fonts/Nexa-Book.woff2');
+}
+
+@font-face {
+    font-family: 'HeaderFont';
+    src: url('fonts/OPTIDelTon-Light.ttf.woff');
 }
 
 :root {
@@ -291,7 +291,6 @@ body {
     background-color: var(--primary-cta-bg);
     font-weight: bold;
     padding: 2px 14px;
-    padding-top: 6px;
     border: 1px solid var(--primary-cta-border);
     font-family: 'ButtonFont';
     margin: 0 12px;
@@ -346,7 +345,6 @@ body {
     font-weight: normal;
     padding: 3px 24px;
     padding-right: 26px;
-    padding-top: 11px;
     border: 1px solid var(--primary-cta-border);
     font-family: 'ButtonFont';
     margin: 0 36px;
