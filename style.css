@@ -476,6 +476,10 @@ h1 {
     font-size: 58px;
 }
 
+#header-left h1 .as-you-type {
+    color: hsl(61, 50%, 70%);
+}
+
 h3 {
     color: #d1d1d1;
     font-size: 26px;
@@ -528,6 +532,7 @@ h2 {
     color: hsl(200, 68%, 55%);
     color: hsl(335, 93%, 55%);
     color: hsl(61, 60%, 80%);
+    color: hsl(61, 50%, 75%);
 
     font-size: 28px;
 }
@@ -657,6 +662,7 @@ h3 a.link, h4 a.link {
     color: rgb(255, 23, 82);
     color: rgb(255, 43, 92);
     color: hsl(200, 48%, 55%);
+    color: hsl(61, 50%, 75%);
     text-decoration: underline;
 }
 
