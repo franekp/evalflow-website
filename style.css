@@ -18,17 +18,7 @@
     src: url('fonts/OPTIDelTon-Light.ttf.woff');
 }
 
-:root {
-    --hue: 150;
-    --header: hsl(var(--hue), 40%, 50%);
-    --primary-cta-bg: hsla(var(--hue), 60%, 40%, 0.4);
-    --primary-cta-bg-hover: hsla(var(--hue), 60%, 50%, 0.48);
-    --primary-cta-border: hsl(var(--hue), 74%, 42%);
-    --primary-cta-text: hsl(var(--hue), 90%, 85%);
-    --navbar-link-hover: var(--header);
-    --link-hover: hsl(var(--hue), 55%, 49%);
-    --secondary-cta-hover: var(--link-hover);
-}
+
 
 :root {
     --hue: 340;
@@ -44,6 +34,18 @@
     --secondary-cta-hover: var(--link-hover);
 }
 
+:root {
+    --hue: 150;
+    --header: hsl(var(--hue), 75%, 50%);
+    --primary-cta-bg: hsla(var(--hue), 60%, 40%, 0.4);
+    --primary-cta-bg-hover: hsla(var(--hue), 60%, 50%, 0.48);
+    --primary-cta-border: hsl(var(--hue), 74%, 42%);
+    --primary-cta-text: hsl(var(--hue), 90%, 85%);
+    --navbar-link-hover: var(--header);
+    --link-hover: hsl(var(--hue), 55%, 49%);
+    --secondary-cta-hover: var(--link-hover);
+}
+
 html {
     background-image: url("background.png");
     background-repeat: repeat;
@@ -54,8 +56,9 @@ html {
 body {
     background: radial-gradient(
         calc(min(700px, 54vw)) 300px at left calc(351px + 0.25 * max(0px, 100vw - 1288px) + 0.25 * (100vw - 1288px)) top 520px,
-        rgba(15, 22, 29, 0.2) 0%, rgba(15, 22, 29, 0.2) 40%, rgba(15, 22, 29, 0.8) 100%
+        rgba(65, 5, 35, 0.2) 0%, rgba(55, 5, 35, 0.2) 40%, rgba(5, 15, 30, 0.8) 100%
     );
+    background: rgba(8, 20, 30, 1.0);
     margin: 0;
     min-height: 100vh;
     min-width: 100vw;
@@ -494,6 +497,10 @@ h2 {
     color: rgb(214, 29, 85);
     color: hsl(200, 28%, 55%);
     color: hsl(200, 48%, 55%);
+    color: hsl(200, 68%, 55%);
+    color: hsl(335, 93%, 55%);
+    color: hsl(61, 90%, 90%);
+    
     font-size: 28px;
 }
 
@@ -513,6 +520,10 @@ h2 {
 
 .demo-animation {
     border: 1px solid #711d2b;
+    border: 1px solid hsl(200, 77%, 19%);
+    border: 1px solid hsl(200, 77%, 19%);
+    border: 1px solid hsl(200, 77%, 23%);
+    border: 1px solid hsl(325, 92%, 29%);
     border: 1px solid hsl(200, 77%, 19%);
     /*border: 1px solid #4f4f77;*/
     border-radius: 4px;
