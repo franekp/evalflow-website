@@ -43,6 +43,7 @@
     --features-bg: #1d6b65;
     --features-bg: #1b4364;
     --features-fg: var(--accent);
+    --main-bg: #08141e;
 
     --primary-cta-bg: hsla(var(--hue), 60%, 40%, 0.4);
     --primary-cta-bg-hover: hsla(var(--hue), 60%, 50%, 0.48);
@@ -54,31 +55,35 @@
 }
 
 html {
-    background-image: url("background.png");
-    background-repeat: repeat;
+    background: var(--main-bg);
     position: relative;
     overflow-x: hidden;
 }
 
 body {
-    background: radial-gradient(
-        calc(min(700px, 54vw)) 300px at left calc(351px + 0.25 * max(0px, 100vw - 1288px) + 0.25 * (100vw - 1288px)) top 520px,
-        rgba(65, 5, 35, 0.2) 0%, rgba(55, 5, 35, 0.2) 40%, rgba(5, 15, 30, 0.8) 100%
-    );
-    background: rgba(8, 20, 30, 1.0);
     background: linear-gradient(to bottom,
-        rgb(8, 20, 30) 0px,
-        rgb(8, 20, 30) 800px,
+        var(--main-bg) 0px,
+        var(--main-bg) 800px,
         var(--features-bg) 1000px,
         var(--features-bg) 2800px,
-        rgb(8, 20, 30) 3000px,
-        rgb(8, 20, 30) 100%);
+        var(--main-bg) 3000px,
+        var(--main-bg) 100%);
     margin: 0;
     min-height: 100vh;
     min-width: 100vw;
     position: absolute;
     top: 0px;
     left: 0px;
+}
+
+#background-transition {
+    position: absolute;
+    top: 700px;
+    left: 0px;
+    width: 2000px;
+    max-inline-size: none;
+    max-block-size: none;
+    height: 400px;
 }
 
 @media (min-width: 1308px) {
@@ -601,7 +606,7 @@ h2 {
 }
 
 #features {
-    margin-top: 220px;
+    margin-top: 290px;
     padding-top: 70px;
 }
 
