@@ -37,11 +37,13 @@
 :root {
     --hue: 150;
     --header: hsl(var(--hue), 75%, 50%);
+    --accent: hsl(61, 50%, 70%);
+
     --primary-cta-bg: hsla(var(--hue), 60%, 40%, 0.4);
     --primary-cta-bg-hover: hsla(var(--hue), 60%, 50%, 0.48);
     --primary-cta-border: hsl(var(--hue), 74%, 42%);
     --primary-cta-text: hsl(var(--hue), 90%, 85%);
-    --navbar-link-hover: var(--header);
+    --navbar-link-hover: var(--accent);
     --link-hover: hsl(var(--hue), 55%, 49%);
     --secondary-cta-hover: var(--link-hover);
 }
@@ -438,9 +440,9 @@ body {
 }
 
 #header-right #language-select input:checked + span {
-    color: hsl(61, 50%, 70%);
+    color: var(--accent);
     padding-top: 0px;
-    border-top: 4px solid hsl(61, 50%, 70%);
+    border-top: 4px solid var(--accent);
 }
 
 #header-right #language-select input:not(:checked) + span:hover {
@@ -520,7 +522,7 @@ h1 {
 }
 
 #header-left h1 .as-you-type {
-    color: hsl(61, 50%, 70%);
+    color: var(--accent);
 }
 
 h3 {
@@ -576,6 +578,7 @@ h2 {
     color: hsl(335, 93%, 55%);
     color: hsl(61, 60%, 80%);
     color: hsl(61, 50%, 75%);
+    color: var(--header);
 
     font-size: 28px;
 }
@@ -705,7 +708,7 @@ h3 a.link, h4 a.link {
     color: rgb(255, 23, 82);
     color: rgb(255, 43, 92);
     color: hsl(200, 48%, 55%);
-    color: hsl(61, 50%, 75%);
+    color: var(--accent);
     text-decoration: underline;
 }
 
