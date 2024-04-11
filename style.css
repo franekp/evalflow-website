@@ -414,6 +414,49 @@ body {
     padding-left: 40px;
 }
 
+#header-right #language-select-outer {
+    display: block;
+    margin-top: 20px;
+}
+
+#header-right #language-select {
+    box-shadow: inset 0px 4px 0px 0px #969696;
+    float: right;
+}
+
+#header-right #language-select label {
+    display: inline-block;
+}
+
+#header-right #language-select span {
+    color: #d1d1d1;
+    font-size: 30px;
+    font-family: 'ButtonFont';
+    display: inline-block;
+    padding-top: 4px;
+    cursor: pointer;
+}
+
+#header-right #language-select input:checked + span {
+    color: hsl(61, 50%, 70%);
+    padding-top: 0px;
+    border-top: 4px solid hsl(61, 50%, 70%);
+}
+
+#header-right #language-select input:not(:checked) + span:hover {
+    color: #e3e3e3;
+    padding-top: 0px;
+    border-top: 4px solid #b8b8b8;
+}
+
+#header-right #language-select label:not(:last-child) span {
+    padding-right: 8px;
+}
+
+#header-right #language-select label:not(:first-child) span {
+    padding-left: 8px;
+}
+
 h1, h2 {
     font-family: 'HeaderFont';
     font-weight: 400;
