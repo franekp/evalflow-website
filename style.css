@@ -45,6 +45,10 @@
     --features-fg: var(--accent);
     --main-bg: #08141e;
 
+    --blurred-main-bg: #091723;
+    --halfway-bg: #122c41;
+    --blurred-features-bg: #183c5a;
+
     --primary-cta-bg: hsla(var(--hue), 60%, 40%, 0.4);
     --primary-cta-bg-hover: hsla(var(--hue), 60%, 50%, 0.48);
     --primary-cta-border: hsl(var(--hue), 74%, 42%);
@@ -60,13 +64,29 @@ html {
     overflow-x: hidden;
 }
 
+:root {
+    --scrollPosition: 0px;
+    --headerMarginTop: 180px;
+
+    --headerHeight: 800px;
+    --transitionHeight: 300px;
+    --featuresHeight: 1800px;
+}
+
 body {
     background: linear-gradient(to bottom,
         var(--main-bg) 0px,
-        var(--main-bg) 800px,
-        var(--features-bg) 1000px,
-        var(--features-bg) 2800px,
-        var(--main-bg) 3000px,
+
+        var(--main-bg) calc(var(--headerHeight) + 50px),
+        var(--blurred-main-bg) calc(var(--headerHeight) + 100px),
+        var(--blurred-features-bg) calc(var(--headerHeight) + var(--transitionHeight) - 100px),
+        var(--features-bg) calc(var(--headerHeight) + var(--transitionHeight) - 50px),
+
+        var(--features-bg) calc(var(--headerHeight) + var(--transitionHeight) + var(--featuresHeight) + 50px),
+        var(--blurred-features-bg) calc(var(--headerHeight) + var(--transitionHeight) + var(--featuresHeight) + 100px),
+        var(--blurred-main-bg) calc(var(--headerHeight) + 2 * var(--transitionHeight) + var(--featuresHeight) - 100px),
+        var(--main-bg) calc(var(--headerHeight) + 2 * var(--transitionHeight) + var(--featuresHeight) - 50px),
+
         var(--main-bg) 100%);
     margin: 0;
     min-height: 100vh;
@@ -78,12 +98,24 @@ body {
 
 #background-transition {
     position: absolute;
-    top: 700px;
+    top: var(--headerHeight);
+    display: block;
     left: 0px;
-    width: 2000px;
     max-inline-size: none;
     max-block-size: none;
-    height: 400px;
+    height: var(--transitionHeight);
+    width: calc(max(6.946153846153846 * var(--transitionHeight), 100vw));
+}
+
+#background-transition-2 {
+    position: absolute;
+    top: calc(var(--headerHeight) + var(--transitionHeight) + var(--featuresHeight));
+    display: block;
+    left: 0px;
+    max-inline-size: none;
+    max-block-size: none;
+    height: var(--transitionHeight);
+    width: calc(max(6.946153846153846 * var(--transitionHeight), 100vw));
 }
 
 @media (min-width: 1308px) {
@@ -99,57 +131,53 @@ body {
     }
 }
 
-:root {
-    --scrollPosition: 0px;
-}
-
 @media (min-width: 1140px) {
     #container {
         -webkit-mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 50px, 0px)),
-            black calc(max(var(--scrollPosition) - 160px + 50px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 50px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 50px + 30px, 0px)), black 100%);
         mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 50px, 0px)),
-            black calc(max(var(--scrollPosition) - 160px + 50px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 50px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 50px + 30px, 0px)), black 100%);
     }
 }
 
 @media (max-width: 1139px) {
     #container {
         -webkit-mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 90px, 0px)),
-            black calc(max(var(--scrollPosition) - 160px + 90px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 90px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 90px + 30px, 0px)), black 100%);
         mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 90px, 0px)),
-            black calc(max(var(--scrollPosition) - 160px + 90px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 90px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 90px + 30px, 0px)), black 100%);
     }
 }
 
 @media (max-width: 761px) {
     #container {
         -webkit-mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 147px, 0px)),
-            black calc(max(var(--scrollPosition) - 160px + 147px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 147px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 147px + 30px, 0px)), black 100%);
         mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 147px, 0px)),
-            black calc(max(var(--scrollPosition) - 160px + 147px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 147px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 147px + 30px, 0px)), black 100%);
     }
 }
 
 @media (max-width: 662px) {
     #container {
         -webkit-mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 200px, 0px)),
-            black calc(max(var(--scrollPosition) - 160px + 200px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px + 30px, 0px)), black 100%);
         mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 200px, 0px)),
-            black calc(max(var(--scrollPosition) - 160px + 200px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px + 30px, 0px)), black 100%);
     }
 }
 
 @supports(mask-image: linear-gradient(
-    transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 200px, 0px)),
-    black calc(max(var(--scrollPosition) - 160px + 200px + 30px, 0px)), black 100%)
+    transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px, 0px)),
+    black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px + 30px, 0px)), black 100%)
 ) {
     #navbar .navbar-background {
         display: none !important;
@@ -157,8 +185,8 @@ body {
 }
 
 @supports(-webkit-mask-image: linear-gradient(
-    transparent 0px, transparent calc(max(var(--scrollPosition) - 160px + 200px, 0px)),
-    black calc(max(var(--scrollPosition) - 160px + 200px + 30px, 0px)), black 100%)
+    transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px, 0px)),
+    black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px + 30px, 0px)), black 100%)
 ) {
     #navbar .navbar-background {
         display: none !important;
@@ -334,7 +362,7 @@ body {
 
 #header {
     margin: 0; padding: 0;
-    margin-top: 160px;
+    margin-top: var(--headerMarginTop);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -439,7 +467,7 @@ body {
 }
 
 #header-right #language-select {
-    box-shadow: inset 0px 4px 0px 0px #969696;
+    box-shadow: inset 0px 3px 0px 0px #969696;
     float: right;
 }
 
@@ -452,20 +480,20 @@ body {
     font-size: 30px;
     font-family: 'ButtonFont';
     display: inline-block;
-    padding-top: 4px;
+    padding-top: 3px;
     cursor: pointer;
 }
 
 #header-right #language-select input:checked + span {
     color: var(--accent);
     padding-top: 0px;
-    border-top: 4px solid var(--accent);
+    border-top: 3px solid var(--accent);
 }
 
 #header-right #language-select input:not(:checked) + span:hover {
     color: #e3e3e3;
     padding-top: 0px;
-    border-top: 4px solid #b8b8b8;
+    border-top: 3px solid #b8b8b8;
 }
 
 #header-right #language-select label:not(:last-child) span {
@@ -752,7 +780,7 @@ h3 hr, h4 hr {
 }
 
 #how-it-works {
-    margin-top: 220px;
+    margin-top: 290px;
     padding-top: 70px;
 }
 
