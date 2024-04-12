@@ -473,7 +473,7 @@ body {
 }
 
 #header-right #language-select {
-    box-shadow: inset 0px 3px 0px 0px #969696;
+    box-shadow: inset 0px 2px 0px 0px #969696;
     float: right;
 }
 
@@ -486,20 +486,20 @@ body {
     font-size: 30px;
     font-family: 'ButtonFont';
     display: inline-block;
-    padding-top: 3px;
+    padding-top: 2px;
     cursor: pointer;
 }
 
 #header-right #language-select input:checked + span {
     color: var(--accent);
     padding-top: 0px;
-    border-top: 3px solid var(--accent);
+    border-top: 2px solid var(--accent);
 }
 
 #header-right #language-select input:not(:checked) + span:hover {
     color: #e3e3e3;
     padding-top: 0px;
-    border-top: 3px solid #b8b8b8;
+    border-top: 2px solid #b8b8b8;
 }
 
 #header-right #language-select label:not(:last-child) span {
