@@ -51,8 +51,13 @@
 
     --link-hover: rgb(245, 245, 245);
 
+    /*
     --primary-cta-bg: hsla(var(--hue), 60%, 40%, 0.4);
     --primary-cta-bg-hover: hsla(var(--hue), 60%, 50%, 0.48);
+    */
+    --primary-cta-bg: rgba(31, 112, 85, 0.7);
+    --primary-cta-bg-hover: rgba(39, 144, 110, 0.65);
+
     --primary-cta-border: hsl(var(--hue), 74%, 42%);
     --primary-cta-text: hsl(var(--hue), 90%, 85%);
     --navbar-link-hover: var(--link-hover);
