@@ -109,6 +109,7 @@ body {
 
 #background-transition-2 {
     position: absolute;
+    transform: scaleY(-1);
     top: calc(var(--headerHeight) + var(--transitionHeight) + var(--featuresHeight));
     display: block;
     left: 0px;
