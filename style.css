@@ -580,6 +580,12 @@ h1 {
     color: var(--accent);
 }
 
+#header-left h1 .as-you-type .underscore {
+    font-family: 'ButtonFont';
+    position: relative;
+    top: 5px;
+}
+
 h3 {
     color: #d1d1d1;
     font-size: 26px;
