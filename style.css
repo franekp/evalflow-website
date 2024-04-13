@@ -37,6 +37,7 @@
 :root {
     --hue: 150;
     --header: hsl(var(--hue), 75%, 50%);
+    --header: hsl(150, 75%, 50%);
     --accent: hsl(61, 50%, 70%);
     --features-bg: #1b645e;
     --features-bg: #227c74;
