@@ -388,7 +388,7 @@ body {
 }
 
 #header-left {
-    flex-basis: 520px;
+    flex-basis: 570px;
     flex-shrink: 0.3;
     flex-grow: 0;
     margin: 0px 0px;
@@ -472,7 +472,7 @@ body {
 }
 
 #header-right {
-    flex-basis: 768px;
+    flex-basis: 718px;
     flex-grow: 1;
     flex-shrink: 1;
     padding-left: 40px;
