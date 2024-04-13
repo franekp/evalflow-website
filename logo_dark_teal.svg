@@ -25,27 +25,75 @@
      id="defs2">
     <linearGradient
        inkscape:collect="always"
-       id="linearGradient1030">
-      <stop
-         style="stop-color:#d7d98c;stop-opacity:1"
-         offset="0"
-         id="stop1026" />
+       id="linearGradient1375">
       <stop
          style="stop-color:#21c372;stop-opacity:1"
+         offset="0"
+         id="stop1373" />
+      <stop
+         style="stop-color:#d7d98c;stop-opacity:1"
          offset="1"
+         id="stop1371" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1303">
+      <stop
+         style="stop-color:#21c372;stop-opacity:1"
+         offset="0"
+         id="stop1301" />
+      <stop
+         style="stop-color:#d7d98c;stop-opacity:1"
+         offset="1"
+         id="stop1299" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1295">
+      <stop
+         style="stop-color:#21c372;stop-opacity:1"
+         offset="0"
+         id="stop1293" />
+      <stop
+         style="stop-color:#d7d98c;stop-opacity:1"
+         offset="1"
+         id="stop1291" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1159">
+      <stop
+         style="stop-color:#21c372;stop-opacity:1"
+         offset="0"
+         id="stop1157" />
+      <stop
+         style="stop-color:#d7d98c;stop-opacity:1"
+         offset="1"
+         id="stop1155" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1030">
+      <stop
+         style="stop-color:#21c372;stop-opacity:1"
+         offset="0"
          id="stop1028" />
+      <stop
+         style="stop-color:#d7d98c;stop-opacity:1"
+         offset="1"
+         id="stop1026" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient136775">
       <stop
-         style="stop-color:#e6e6e6;stop-opacity:1;"
-         offset="0"
-         id="stop136771" />
-      <stop
          style="stop-color:#21c372;stop-opacity:1"
-         offset="1"
+         offset="0"
          id="stop136773" />
+      <stop
+         style="stop-color:#d7d98c;stop-opacity:1"
+         offset="1"
+         id="stop136771" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -121,9 +169,9 @@
        xlink:href="#linearGradient136775"
        id="linearGradient924"
        gradientUnits="userSpaceOnUse"
-       x1="527.85913"
+       x1="140.09978"
        y1="184.10097"
-       x2="753.36804"
+       x2="764.8493"
        y2="184.10097" />
     <linearGradient
        inkscape:collect="always"
@@ -136,7 +184,7 @@
        y2="184.10097" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient1030"
+       xlink:href="#linearGradient1159"
        id="linearGradient928"
        gradientUnits="userSpaceOnUse"
        x1="527.85913"
@@ -145,7 +193,7 @@
        y2="184.10097" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient1030"
+       xlink:href="#linearGradient1295"
        id="linearGradient930"
        gradientUnits="userSpaceOnUse"
        x1="527.85913"
@@ -154,7 +202,7 @@
        y2="184.10097" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient1030"
+       xlink:href="#linearGradient1303"
        id="linearGradient932"
        gradientUnits="userSpaceOnUse"
        x1="527.85913"
@@ -163,7 +211,7 @@
        y2="184.10097" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient1030"
+       xlink:href="#linearGradient1375"
        id="linearGradient934"
        gradientUnits="userSpaceOnUse"
        x1="527.85913"
@@ -172,7 +220,7 @@
        y2="184.10097" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient136775"
+       xlink:href="#linearGradient1375"
        id="linearGradient936"
        gradientUnits="userSpaceOnUse"
        x1="527.85913"
@@ -181,7 +229,7 @@
        y2="184.10097" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient136775"
+       xlink:href="#linearGradient1303"
        id="linearGradient938"
        gradientUnits="userSpaceOnUse"
        x1="527.85913"
@@ -196,11 +244,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.18828065"
-     inkscape:cx="1957.1847"
-     inkscape:cy="953.36404"
+     inkscape:zoom="0.12272775"
+     inkscape:cx="998.1443"
+     inkscape:cy="965.55183"
      inkscape:document-units="mm"
-     inkscape:current-layer="g146893"
+     inkscape:current-layer="layer11"
      showgrid="false"
      inkscape:window-width="1850"
      inkscape:window-height="1136"
@@ -691,8 +739,7 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="evalflow_name_text"
-     style="display:none"
-     sodipodi:insensitive="true"
+     style="display:inline"
      transform="translate(-50,-30)">
     <text
        xml:space="preserve"
@@ -712,15 +759,16 @@
      inkscape:groupmode="layer"
      id="g146893"
      inkscape:label="evalflow_name"
-     style="display:inline"
-     transform="translate(-50,-30)">
+     style="display:none"
+     transform="translate(-50,-30)"
+     sodipodi:insensitive="true">
     <path
        d="M 355.50551,241.14453 V 132.51117 h 62.34995 v 18.86712 h -41.27183 v 25.6475 h 34.34406 v 18.27752 h -34.34406 v 26.9741 h 41.27183 v 18.86712 z"
-       style="font-weight:bold;font-size:150.937px;line-height:1.25;font-family:'Reddit Sans';-inkscape-font-specification:'Reddit Sans Bold';letter-spacing:2.64583px;fill:url(#linearGradient926);fill-opacity:1.0;stroke-width:0.25728"
+       style="font-weight:bold;font-size:150.937px;line-height:1.25;font-family:'Reddit Sans';-inkscape-font-specification:'Reddit Sans Bold';letter-spacing:2.64583px;fill:url(#linearGradient926);fill-opacity:1;stroke-width:0.25728"
        id="path147077" />
     <path
        d="m 459.78324,241.14453 -30.65908,-79.00608 h 21.81511 l 12.38155,37.43945 5.74858,19.60412 h 0.5896 l 5.74857,-19.60412 12.52895,-37.43945 h 21.66772 l -30.65908,79.00608 z"
-       style="font-weight:bold;font-size:150.937px;line-height:1.25;font-family:'Reddit Sans';-inkscape-font-specification:'Reddit Sans Bold';letter-spacing:2.64583px;fill:url(#linearGradient928);fill-opacity:1.0;stroke-width:0.25728"
+       style="font-weight:bold;font-size:150.937px;line-height:1.25;font-family:'Reddit Sans';-inkscape-font-specification:'Reddit Sans Bold';letter-spacing:2.64583px;fill:url(#linearGradient928);fill-opacity:1;stroke-width:0.25728"
        id="path147079" />
     <path
        d="m 591.47726,225.078 -7.22257,17.24573 -2.50579,-0.8844 q -9.50727,-3.31649 -12.01306,-9.58096 h -0.29479 q -3.39019,4.42198 -10.17056,7.44367 -6.70668,3.02169 -14.59255,3.02169 -7.95956,0 -14.07664,-3.16909 -6.11707,-3.24279 -9.50726,-8.77027 -3.31649,-5.52747 -3.31649,-12.23415 0,-7.14887 3.90609,-12.60265 3.97978,-5.45377 11.79195,-8.47546 7.81217,-3.02169 18.94082,-3.02169 h 13.41335 v -3.61129 q 0,-5.96967 -3.61129,-9.28616 -3.53758,-3.39019 -10.61275,-3.39019 -5.52748,0 -11.79196,1.9162 -6.26447,1.84249 -10.24425,4.42198 l -6.63298,-15.77174 q 5.01158,-3.02169 13.70815,-5.23268 8.69656,-2.28469 17.98273,-2.28469 13.41334,0 20.12001,4.79048 6.78038,4.79048 8.54917,10.98126 1.84249,6.19077 1.84249,13.56075 v 24.4683 q 0,4.64308 0.8844,6.85407 0.9581,2.21099 3.53759,3.02169 z m -42.96693,1.91619 q 3.83238,0 8.10697,-1.474 4.34828,-1.54769 7.36997,-4.79048 3.02169,-3.24278 3.02169,-8.03326 v -4.79049 h -15.18214 q -7.00148,0 -10.90756,2.50579 -3.83238,2.43209 -3.83238,7.14888 0,4.34828 3.24278,6.92777 3.31649,2.50579 8.18067,2.50579 z"
@@ -728,12 +776,12 @@
        id="path147081" />
     <path
        d="m 628.54084,242.32373 q -6.19078,0 -10.53906,-2.80059 -4.34828,-2.80059 -6.55927,-7.66477 -2.21099,-4.93788 -2.21099,-11.20236 v -93.00902 h 20.34111 v 90.65063 q 0,6.63298 5.45378,6.63298 1.6951,0 3.24279,-0.5896 v 16.36133 q -1.98989,0.737 -4.56938,1.1792 -2.57949,0.4422 -5.15898,0.4422 z"
-       style="font-weight:bold;font-size:150.937px;line-height:1.25;font-family:'Reddit Sans';-inkscape-font-specification:'Reddit Sans Bold';letter-spacing:2.64583px;fill:url(#linearGradient932);fill-opacity:1.0;stroke-width:0.25728"
+       style="font-weight:bold;font-size:150.937px;line-height:1.25;font-family:'Reddit Sans';-inkscape-font-specification:'Reddit Sans Bold';letter-spacing:2.64583px;fill:url(#linearGradient932);fill-opacity:1;stroke-width:0.25728"
        id="path147083" />
     <path
        d="m 693.90511,143.56612 q -3.97978,0 -6.70667,2.57949 -2.65319,2.57949 -2.65319,7.44367 v 8.40177 h 18.71973 v 16.36133 h -18.71973 v 62.79215 h -19.89892 v -62.79215 h -14.44514 v -16.36133 h 14.44514 v -9.58096 q 0,-12.23416 6.85407,-19.38303 6.85408,-7.14887 20.63592,-7.14887 8.10697,0 14.51884,2.35839 l -6.63297,16.65614 q -3.46389,-1.3266 -6.11708,-1.3266 z m 52.17939,81.65927 q 1.0318,0 2.0636,-0.22109 1.10549,-0.2211 1.69509,-0.5159 v 15.91913 q -2.13729,0.8107 -4.93788,1.2529 -2.72689,0.5159 -5.38008,0.5159 -6.11707,0 -10.39166,-2.57949 -4.20088,-2.65319 -6.33817,-7.22257 -2.13729,-4.64309 -2.13729,-10.53906 v -89.32404 h 20.34112 v 85.93385 q 0,2.65319 1.17919,4.71678 1.1792,2.06359 3.90608,2.06359 z"
        id="path147085"
-       style="font-size:150.937px;line-height:1.25;font-family:Modica;-inkscape-font-specification:Modica;letter-spacing:2.64583px;fill:url(#linearGradient934);fill-opacity:1.0;stroke-width:0.25728" />
+       style="font-size:150.937px;line-height:1.25;font-family:Modica;-inkscape-font-specification:Modica;letter-spacing:2.64583px;fill:url(#linearGradient934);fill-opacity:1;stroke-width:0.25728" />
     <path
        d="m 805.10327,242.32373 q -11.27606,0 -20.48852,-5.15898 -9.21246,-5.23268 -14.59254,-14.51884 -5.30638,-9.28617 -5.30638,-21.07812 0,-11.34976 5.08528,-20.56222 5.15898,-9.28616 14.37144,-14.66624 9.21247,-5.38008 20.93072,-5.38008 11.27605,0 20.48852,5.08528 9.28616,5.08528 14.59254,14.29774 5.30638,9.21247 5.30638,21.15182 0,12.08675 -5.45378,21.37291 -5.38008,9.28617 -14.59254,14.37145 -9.21246,5.08528 -20.34112,5.08528 z m 0,-17.39313 q 5.89598,0 10.61276,-2.94799 4.79048,-3.02169 7.44367,-8.32807 2.72689,-5.38008 2.72689,-12.16045 0,-6.78037 -2.72689,-12.01305 -2.72689,-5.23268 -7.51737,-8.10697 -4.71678,-2.87429 -10.53906,-2.87429 -5.89598,0 -10.68646,2.87429 -4.71678,2.87429 -7.44367,8.18067 -2.65319,5.23268 -2.65319,12.08675 0,7.22257 2.87429,12.52895 2.87429,5.23268 7.59107,8.03327 4.79048,2.72689 10.31796,2.72689 z"
        id="path147087"
