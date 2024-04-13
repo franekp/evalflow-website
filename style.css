@@ -142,50 +142,50 @@ body {
 @media (min-width: 1140px) {
     #container {
         -webkit-mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 50px, 0px)),
-            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 50px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 56px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 56px + 30px, 0px)), black 100%);
         mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 50px, 0px)),
-            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 50px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 56px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 56px + 30px, 0px)), black 100%);
     }
 }
 
 @media (max-width: 1139px) {
     #container {
         -webkit-mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 90px, 0px)),
-            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 90px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 96px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 96px + 30px, 0px)), black 100%);
         mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 90px, 0px)),
-            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 90px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 96px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 96px + 30px, 0px)), black 100%);
     }
 }
 
 @media (max-width: 761px) {
     #container {
         -webkit-mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 147px, 0px)),
-            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 147px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 153px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 153px + 30px, 0px)), black 100%);
         mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 147px, 0px)),
-            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 147px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 153px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 153px + 30px, 0px)), black 100%);
     }
 }
 
 @media (max-width: 662px) {
     #container {
         -webkit-mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px, 0px)),
-            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 206px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 206px + 30px, 0px)), black 100%);
         mask-image: linear-gradient(
-            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px, 0px)),
-            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px + 30px, 0px)), black 100%);
+            transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 206px, 0px)),
+            black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 206px + 30px, 0px)), black 100%);
     }
 }
 
 @supports(mask-image: linear-gradient(
-    transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px, 0px)),
-    black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px + 30px, 0px)), black 100%)
+    transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 206px, 0px)),
+    black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 206px + 30px, 0px)), black 100%)
 ) {
     #navbar .navbar-background {
         display: none !important;
@@ -193,8 +193,8 @@ body {
 }
 
 @supports(-webkit-mask-image: linear-gradient(
-    transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px, 0px)),
-    black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 200px + 30px, 0px)), black 100%)
+    transparent 0px, transparent calc(max(var(--scrollPosition) - var(--headerMarginTop) + 206px, 0px)),
+    black calc(max(var(--scrollPosition) - var(--headerMarginTop) + 206px + 30px, 0px)), black 100%)
 ) {
     #navbar .navbar-background {
         display: none !important;
@@ -212,7 +212,7 @@ body {
 }
 
 #navbar.navbar-shrink {
-    padding-top: 0px;
+    padding-top: 3px;
 }
 
 @media (max-width: 761px) {
