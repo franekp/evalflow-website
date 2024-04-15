@@ -324,7 +324,7 @@ body {
 }
 
 #navbar .navbar-link {
-    color: hsla(0, 0%, 100%, 0.94);
+    color: hsl(0, 0%, 94%);
     font-family: 'NavbarLinkFont';
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -376,7 +376,7 @@ body {
     margin-right: 0px;
     font-size: 20px;
     border-radius: 2px;
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.7);
 }
 
 #navbar .navbar-cta:hover {
@@ -692,7 +692,7 @@ h2 {
     border: 1px solid hsl(61, 10%, 30%);
     /*border: 1px solid #4f4f77;*/
     border-radius: 4px;
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.7);
     position: relative;
     overflow: hidden;
 }
@@ -749,6 +749,14 @@ h2 {
     box-sizing: border-box;
     top: 0;
     left: 0;
+}
+
+#header .demo-animation div {
+    box-shadow: inset 0px 0px 4px 2px #2a2323, inset 0px 0px 8px -3px #2a2323;
+}
+
+#features .demo-animation div {
+    box-shadow: inset 0px 0px 4px 2px hsla(202, 15%, 15%, 0.7), inset 0px 0px 8px -3px hsla(202, 15%, 15%, 0.7);
 }
 
 #features .feature {
