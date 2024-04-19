@@ -127,6 +127,10 @@ body {
     max-block-size: none;
     height: var(--transitionHeight);
     width: calc(max(4.958 * var(--transitionHeight), 100vw));
+
+    background-image: url("./hexagonal_gradient_thin.png");
+    background-size: contain;
+    background-repeat: repeat-x;
 }
 
 #background-transition-2 {
@@ -139,6 +143,10 @@ body {
     max-block-size: none;
     height: var(--transitionHeight);
     width: calc(max(4.958 * var(--transitionHeight), 100vw));
+
+    background-image: url("./hexagonal_gradient_thin.png");
+    background-size: contain;
+    background-repeat: repeat-x;
 }
 
 @media (min-width: 1308px) {
