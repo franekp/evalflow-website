@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'NavbarLinkFont';
+    src: url('fonts/Nexa-Bold.woff2');
+}
+
+@font-face {
+    font-family: 'ButtonFont';
+    src: url('fonts/Nexa-Bold.woff2');
+}
+
+@font-face {
+    font-family: 'TextFont';
+    src: url('fonts/Nexa-Book.woff2');
+}
+
+@font-face {
+    font-family: 'HeaderFont';
+    src: url('fonts/OPTIDelTon-Light.ttf.woff');
+}
+
+:root {
+    --hue: 150;
+    --header: hsl(150, 75%, 50%);
+
+    --accent: hsl(61, 65%, 75%);
+    --accent: hsl(61, 58%, 72%);
+    --accent: #e0e18e;
+    --features-bg: #1b645e;
+    --features-bg: #227c74;
+    --features-bg: #1d6b65;
+    --features-bg: #1b4364;
+    --features-bg: #1b4764;
+    --features-bg: hsl(204, 58%, 28%);
+    --features-bg: hsl(204, 58%, 33%);
+    --features-bg: hsl(204, 58%, 38%);
+    --features-bg: hsl(204, 58%, 40%);
+    --features-bg: hsl(204, 67%, 38%);
+    --features-bg: hsl(204, 67%, 35%);
+    --features-bg: hsl(204, 67%, 33%);
+    --features-bg: hsl(204, 65%, 33%);
+    --features-bg: hsl(204, 67%, 38%);
+    --features-bg: #206ea2;
+    --features-bg: hsl(204, 67%, 35%);
+    --features-bg: #1d6595;
+    --features-fg: var(--accent);
+    --main-bg: #07131c;
+
+    --blurred-main-bg: #091723;
+    --halfway-bg: #122c41;
+    --blurred-features-bg: #183c5a;
+
+    --link-hover: hsla(0, 0%, 100%, 0.96);
+
+    /*
+    --primary-cta-bg: hsla(var(--hue), 60%, 40%, 0.4);
+    --primary-cta-bg-hover: hsla(var(--hue), 60%, 50%, 0.48);
+    */
+    --primary-cta-bg: rgba(31, 112, 85, 0.7);
+    --primary-cta-bg-hover: rgba(39, 144, 110, 0.65);
+
+    --primary-cta-border: hsl(var(--hue), 74%, 42%);
+    --primary-cta-text: hsl(var(--hue), 90%, 85%);
+    --navbar-link-hover: var(--accent);
+    --secondary-cta-hover: var(--link-hover);
+}
+
+html {
+    background: var(--main-bg);
+    position: relative;
+    overflow-x: hidden;
+}
+
+#coming-soon {
+    padding-top: 200px;
+    padding-left: 100px;
+}
+
+#coming-soon h1 {
+    font-size: 70px;
+}
+
+h1, h2 {
+    font-family: 'HeaderFont';
+    font-weight: 400;
+    word-spacing: 0.05em;
+    
+    
+    letter-spacing: 0.01em;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    letter-spacing: 0.8px;
+}
+
+h3, h4 {
+    font-family: 'TextFont';
+    font-weight: 400;
+    word-spacing: 0.00em;
+    letter-spacing: 0.0px;
+    /*line-height: 1.18;*/
+}
+
+h1, h2, h3, h4 {
+    margin-left: 0px;
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 42px;
+    line-height: 1.3;
+    color: rgb(255, 23, 82);
+    color: rgb(255, 90, 115);
+    color: rgb(255, 70, 100);
+    color: rgb(255, 70, 105);
+    color: rgb(255, 43, 92);
+    color: rgb(235, 30, 91);
+    color: var(--header);
+
+    font-size: 58px;
+    font-size: 52px;
+    font-weight: 400;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evalflow</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <script type="text/javascript">
+    window.onscroll = function () {
+        document.documentElement.style.setProperty('--scrollPosition', `${document.body.scrollTop || document.documentElement.scrollTop}px`);
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").classList = ['navbar-shrink'];
+        } else {
+            document.getElementById("navbar").classList = [];
+        }
+    }
+  </script>
+</head>
+
+<body>
+    <div id="coming-soon"><h1>Coming soon!</h1></div>
+</body>
+
+</html>
